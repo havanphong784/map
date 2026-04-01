@@ -72,6 +72,26 @@ npm run build
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+1. Push code to `main` branch.
+2. In GitHub repository settings:
+
+- Open `Settings` -> `Pages`.
+- Set source to `GitHub Actions`.
+
+3. Add repository secret:
+
+- Open `Settings` -> `Secrets and variables` -> `Actions`.
+- Add `VITE_GOOGLE_MAPS_API_KEY` with your Google Maps key.
+
+4. Push again or run `Deploy to GitHub Pages` workflow manually.
+
+After first deployment, whitelist your GitHub Pages domain in Google API key HTTP referrers:
+
+- `https://<your-username>.github.io/*`
+- `https://<your-username>.github.io/<your-repo>/*`
+
 ## Mock Data Example
 
 `src/data/mockDisasters.js` contains initial sample alerts:
